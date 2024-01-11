@@ -82,7 +82,7 @@
       
       enable	= true; 
       userName	= "eggsrael";
-      userEmail = "adam.bonnet03@gmail.com";
+      userEmail = "";
     };
     
     programs.zsh = { 
