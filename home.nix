@@ -42,8 +42,10 @@
    	pkgs.appimage-run
 	pkgs.yarn
 	pkgs.nodejs
-   	pkgs.etcher
-   ];
+	pkgs.kicad
+	pkgs.glibc
+  
+    ];
     
     home.stateVersion = "23.11";
    
@@ -55,7 +57,6 @@
       enable	      = true;    
       vimAlias	      = true;
       viAlias	      = true;
-      <S-v>
     };
   
     programs.kitty = {
@@ -96,7 +97,8 @@
 	update   = "home-manager switch";
 	homefile = "nvim ~/nixfiles/home.nix";
         ssh 	 = "kitty +kitten ssh"; 
-	vim	 = "steam-run vim";
+	vim	 = "steam-run nvim";
+	initfile = "steam-run nvim ~/.config/nvim/init.lua";
       };
 
       oh-my-zsh = { 
@@ -105,7 +107,7 @@
 	theme   = "fox";
       };
       initExtra = '' 
-	ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=50
+	ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 	eval $(thefuck --alias)
 	'';
     };
